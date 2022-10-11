@@ -4,7 +4,7 @@ import Blog from './Components/Blog/Blog';
 import Default from './Components/Default/Default';
 import Home from './Components/Home/Home';
 import Main from './Components/Main/Main';
-import Quiz from './Components/Quiz/Quiz';
+import Quiz from './Components/Quizes/Quizes';
 import Statistics from './Components/Statistics/Statistics';
 import Topics from './Components/Topics/Topics';
 
@@ -43,7 +43,7 @@ function App() {
     }
   ])
   return (
-    <div className="App bg-indigo-50 h-screen">
+    <div className="App bg-indigo-50 min-h-screen">
       <RouterProvider router={router}></RouterProvider>
     </div>
   );

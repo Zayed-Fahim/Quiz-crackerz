@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import Topics from "../Topics/Topics";
-
+import './Default.css'
 const Default = () => {
     const [quizTopics, setQuizTopics] = useState([])
     useEffect(() => {
@@ -9,13 +9,15 @@ const Default = () => {
             .then(data =>setQuizTopics(data.data))
     },[])
     return (
-        <div className="grid grid-cols-4 m-[230px]">
-            {
-                quizTopics?.map(quizTopic => <Topics
+        <div>
+            <div className="flex gap-[30px] justify-center pt-[200px]">
+                {
+                    quizTopics?.map(quizTopic => <Topics
                     quizTopic={quizTopic}
                     key={quizTopic.id}
-                ></Topics>)
-            }
+                    ></Topics>)
+                }
+            </div>
         </div>
     );
 };
