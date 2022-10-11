@@ -4,6 +4,7 @@ import Blog from './Components/Blog/Blog';
 import Default from './Components/Default/Default';
 import Home from './Components/Home/Home';
 import Main from './Components/Main/Main';
+import Quiz from './Components/Quiz/Quiz';
 import Statistics from './Components/Statistics/Statistics';
 import Topics from './Components/Topics/Topics';
 
@@ -20,6 +21,11 @@ function App() {
         {
           path: '/home',
           element:<Home></Home>
+        },
+        {
+          path: '/quiz/:quizId',
+          
+          element:<Quiz></Quiz>
         },
         {
           path: '/topics',

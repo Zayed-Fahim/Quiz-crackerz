@@ -4,7 +4,7 @@ import Topics from "../Topics/Topics";
 const Default = () => {
     const [quizTopics, setQuizTopics] = useState([])
     useEffect(() => {
-        fetch("//openapi.programming-hero.com/api/quiz")
+        fetch("https://openapi.programming-hero.com/api/quiz")
             .then(res => res.json())
             .then(data =>setQuizTopics(data.data))
     },[])
