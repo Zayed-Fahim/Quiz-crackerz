@@ -7,7 +7,7 @@ const Default = () => {
         fetch("https://openapi.programming-hero.com/api/quiz")
             .then(res => res.json())
             .then(data =>setQuizTopics(data.data))
-    },[])
+    }, [])
     return (
         <div>
             <div className="flex gap-[30px] justify-center pt-[200px]">
