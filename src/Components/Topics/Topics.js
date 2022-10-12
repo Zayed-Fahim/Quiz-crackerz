@@ -21,7 +21,9 @@ const Topics = ({ quizTopic }) => {
                 </div>
             </div>
         </div>
+        
     );
+        
 };
 
 export default Topics;
