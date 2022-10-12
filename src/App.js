@@ -44,7 +44,8 @@ function App() {
           element: <Blog></Blog>
         }
       ]
-    }
+    },
+    { path: '*', element: <div className='text-5xl text-center flex justify-center items-center font-bold'>404 Not Found!</div> }
   ])
   return (
     <div className="App bg-indigo-50 min-h-screen">
