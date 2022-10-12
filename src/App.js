@@ -7,6 +7,8 @@ import Main from './Components/Main/Main';
 import Quizes from './Components/Quizes/Quizes';
 import Statistics from './Components/Statistics/Statistics';
 import Topics from './Components/Topics/Topics';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const router = createBrowserRouter([
@@ -47,6 +49,7 @@ function App() {
   return (
     <div className="App bg-indigo-50 min-h-screen">
       <RouterProvider router={router}></RouterProvider>
+      <ToastContainer />
     </div>
   );
 }
