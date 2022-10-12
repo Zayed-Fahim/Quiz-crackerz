@@ -1,6 +1,8 @@
 # Getting Started with Create React App
 
-Live site link
+# Live site link : (https://quiz-2-go-by-zayed.netlify.app/)
+# In this project i used tailwind css.
+#
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
