@@ -15,7 +15,7 @@ const Quizes = () => {
     return (
         <div>
             {
-                questions?.map(_question => <Quiz key={_question.id} question_={_question.question} option={_question.options} handleAns={handleAns} correctAns={_question.correctAnswer}></Quiz>)
+                questions?.map(_question => <Quiz key={_question.id} question_={_question.question} option={_question.options} handleAns={handleAns} correctAns={_question.correctAnswer} id={_question.id}></Quiz>)
             }
         </div>
     );

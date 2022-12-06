@@ -9,44 +9,63 @@ import Statistics from './Components/Statistics/Statistics';
 import Topics from './Components/Topics/Topics';
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Button from './Components/Button';
 
 function App() {
   const router = createBrowserRouter([
     {
-      path: '/',
-      element: <Main></Main>, 
+      path: "/",
+      element: <Main></Main>,
       children: [
         {
-          path: '/',
-          element:<Default></Default>
+          path: "/",
+          element: <Default></Default>,
         },
         {
-          path: '/quiz/:quizId',
+          path: "/quiz/:quizId",
           loader: async ({ params }) => {
-            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`)
+            return fetch(
+              `https://openapi.programming-hero.com/api/quiz/${params.quizId}`
+            );
           },
-          element: <Quizes></Quizes>
+          element: <Quizes></Quizes>,
         },
         {
-          path: '/home',
-          element:<Home></Home>
+          path: "/quiz/:quizId",
+          loader: async ({ params }) => {
+            return fetch(
+              `https://openapi.programming-hero.com/api/quiz/${params.quizId}`
+            );
+          },
+          element:<Button></Button>
         },
         {
-          path: '/topics',
-          element:<Topics></Topics>
+          path: "/home",
+          element: <Home></Home>,
         },
         {
-          path: '/statistics',
-          element: <Statistics></Statistics>
+          path: "/topics",
+          element: <Topics></Topics>,
         },
         {
-          path: '/blog',
-          element: <Blog></Blog>
-        }
-      ]
+          path: "/statistics",
+          element: <Statistics></Statistics>,
+        },
+        {
+          path: "/blog",
+          element: <Blog></Blog>,
+        },
+      ],
     },
-    { path: '*', element: <div className='text-5xl text-center flex justify-center items-center font-bold'>404 Not Found!</div> }
-  ])
+    {
+      path: "*",
+      element: (
+        <div className="text-5xl text-center flex justify-center items-center font-bold">
+          404 Not Found!
+        </div>
+      ),
+    },
+  ]);
   return (
     <div className="App bg-indigo-50 min-h-screen">
       <RouterProvider router={router}></RouterProvider>
